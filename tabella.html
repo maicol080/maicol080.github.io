@@ -4,47 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #head {
+            background-color: lightgray;
+        }
+        table, td, tr {
+            border: 1px solid black;
+        }
+        td {
+            text-align: center;
+        }
+        .green {
+            background-color: green;
+        }
+        .red {
+            background-color: red;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .orange {
+            background-color: orange;
+        }
+    </style>
 </head>
 <body>
     <p><a href = index.html> Torna indietro </a></p>
-    <table border = "1px">
+    <table>
         <tr>
-            <td colspan = "5" align = "center" bgcolor = "lightgrey"> Classe 3Cinf </td>
+            <td id = "head" colspan = "5"> Classe 3Cinf </td>
         </tr>
         <tr>
             <td></td>
-            <td align = "center"> Storia </td>
-            <td align = "center"> Matematica </td>
-            <td align = "center"> Informatica </td>
-            <td align = "center"> italiano </td>
+            <td> Storia </td>
+            <td> Matematica </td>
+            <td> Informatica </td>
+            <td> italiano </td>
         </tr>
         <tr>
-            <td align = "center"> Luca </td>
-            <td bgcolor = "red" align = "center"> 3 </td>
-            <td bgcolor = "red" align = "center"> 4 </td>
-            <td bgcolor = "red" align = "center"> 2 </td>
-            <td bgcolor = "red" align = "center"> 1 </td>
+            <td> Luca </td>
+            <td class = "red"> 3 </td>
+            <td class = "orange"> 5 </td>
+            <td class = "red"> 2 </td>
+            <td class = "yellow"> 5.5 </td>
         </tr>
         <tr>
-            <td align = "center"> Marco </td>
-            <td bgcolor = "green" align = "center"> 9 </td>
-            <td bgcolor = "green" align = "center"> 6 </td>
-            <td bgcolor = "orange" align = "center"> 5 </td>
-            <td bgcolor = "green" align = "center"> 7 </td>
+            <td> Marco </td>
+            <td class = "green"> 9 </td>
+            <td class = "green"> 6 </td>
+            <td class = "orange"> 5 </td>
+            <td class = "green"> 7 </td>
         </tr>
         <tr>
-            <td align = "center"> Valerio </td>
-            <td bgcolor = "yellow" align = "center"> 5.5 </td>
-            <td bgcolor = "green" align = "center"> 9 </td>
-            <td bgcolor = "red" align = "center"> 4.5 </td>
-            <td bgcolor = "green" align = "center"> 6 </td>
+            <td> Valerio </td>
+            <td class = "yellow"> 5.5 </td>
+            <td class = "green"> 9 </td>
+            <td class = "red"> 4.5 </td>
+            <td class = "green"> 6 </td>
         </tr>
         <tr>
-            <td align = "center"> Simone </td>
-            <td bgcolor = "green" align = "center"> 7 </td>
-            <td bgcolor = "red" align = "center"> 2 </td>
-            <td bgcolor = "red" align = "center"> 5 </td>
-            <td bgcolor = "green" align = "center"> 9</td>
+            <td> Simone </td>
+            <td class = "green"> 7 </td>
+            <td class = "red"> 2 </td>
+            <td class = "red"> 5 </td>
+            <td class = "green"> 9</td>
         </tr>
     </table>
 </body>
