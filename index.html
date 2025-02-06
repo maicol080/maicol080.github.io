@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intestazioni</title>
     <style>
+        body {
+            background-color: tan;
+        }
+        button {
+            background-color: rgb(179, 157, 128);
+        }
         #titolo {
             font-size: 40px;
             text-align: center;
+            font-weight: bold;
+            font-style: italic;
         }
         h2, h4 {
             text-align: center;
@@ -17,33 +25,52 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            width: 440px;
             height: 500px;
             justify-content: space-between;
-            align-items: stretch;
         }
         .pulsante {
-            border: none;
-            padding: 25px;
-            border-radius: 10px;
-            width: 150px;
+                border: none;
+                border-radius: 10px;
+                height:100%;
         }
         .pulsante:not(:hover) {
-            transition: 0.7s;
-            border-radius: 10px;
+                transition: 0.7s;
+                border-radius: 10px;
         }
         .pulsante:hover {
-            transition: 0.7s;
             border-radius: 32px;
+            transition: 0.7s;
+            cursor:pointer;
+        }
+        a {
+            border-radius: 32px;
+            height: 50px;
+        }
+        @media screen and (min-width: 992px) {
+            .container {
+                width: 440px;
+            }
+            .pulsante {
+                width: 150px;
+            }
+        }
+        @media screen and (max-width: 992px) {    
+            .container {
+                width: 300px;
+            }
+            .pulsante {
+                width: 101px;
+                font-size:10px;
+            }
         }
     </style>
 </head>
 <body>
     <div id = "titolo">
-        <b> <i> Sito di Michele Scimonelli </i> </b> <br/>
+        Sito di Michele Scimonelli
     </div>
     <h2> ad uso didattico </h2>
-    <h4> <u> I miei compiti: </u> </h4>
+    <h4>I miei compiti:</h4>
     <div class = "container">
         <a href = "intestazioni.html"> <button class = "pulsante"> Intestazioni </button></a>
         <a href = "paragrafi.html"> <button class = "pulsante"> Paragrafi </button></a>
