@@ -71,8 +71,11 @@
                 width: 101px;
                 font-size:10px;
             }
-            .container #ultima-riga {
-                height: 10%;
+            #ultima-riga {
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+                transform: translateY(-83.5px);
             }
         }
         @keyframes fadeIn {
@@ -95,9 +98,11 @@
         <a href = "tabella.html"> <button class = "pulsante"> Tabella </button></a>
         <a href = "immagine.html"> <button class = "pulsante"> Immagine e lista </button></a>
         <a href = "submit.html"> <button class = "pulsante"> Modulo </button></a>
-        <a href = "esercitazione.html"> <button class = "pulsante"> Esercitazione </button></a>
+        <a href = "esercitazione.html"> <button class = "pulsante"> Esercitazione </button></a> 
         <a href = "ricetta.html"> <button class = "pulsante"> Ricetta </button></a>
-        <a href = "tabellacss.html"> <button class = "pulsante"> CSS </button></a>
+        <div id = "ultima-riga">
+            <a href = "tabellacss.html"> <button class = "pulsante"> CSS </button></a>
+        </div>
     </div>
 </body>
 </html>
