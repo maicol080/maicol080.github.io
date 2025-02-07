@@ -6,7 +6,10 @@
     <title>Intestazioni</title>
     <style>
         body {
-            background-color: tan;
+            opacity: 0;
+            animation: fadeIn 0.7s ease-in forwards;
+            background: linear-gradient(to bottom, #F8EAD2, #E5C5A1);
+            color: #5A3E2B;
         }
         #titolo {
             font-size: 40px;
@@ -26,21 +29,22 @@
             justify-content: space-between;
         }
         .pulsante {
-                border: none;
-                border-radius: 10px;
-                height:100%;
-                background-color: rgb(179, 157, 128);
-                color: black;
+            border: none;
+            border-radius: 10px;
+            height:100%;
+            background-color: #C5906C;
+            color: white;
+            transform: translateY(10px);
         }
         .pulsante:not(:hover) {
-                transition: 0.7s;
-                border-radius: 10px;
+            transition: 0.7s;
+            border-radius: 10px;
         }
         .pulsante:hover {
             border-radius: 32px;
             transition: 0.7s;
             cursor:pointer;
-            background-color: rgb(156, 138, 115);
+            background-color: #A37050;
         }
         a {
             border-radius: 32px;
@@ -48,10 +52,15 @@
         }
         @media screen and (min-width: 992px) {
             .container {
-                width: 440px;
+                width: 500px;
             }
             .pulsante {
                 width: 150px;
+            }
+            #ultima-riga {
+                display: flex;
+                justify-content: center;
+                width: 100%;
             }
         }
         @media screen and (max-width: 992px) {    
@@ -62,6 +71,10 @@
                 width: 101px;
                 font-size:10px;
             }
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
     </style>
 </head>
@@ -81,7 +94,9 @@
         <a href = "submit.html"> <button class = "pulsante"> Modulo </button></a>
         <a href = "esercitazione.html"> <button class = "pulsante"> Esercitazione </button></a>
         <a href = "ricetta.html"> <button class = "pulsante"> Ricetta </button></a>
-        <a href = "tabellacss.html"> <button class = "pulsante"> CSS </button></a>
+        <div id = "ultima-riga">
+            <a href = "tabellacss.html"> <button class = "pulsante"> CSS </button></a>
+        </div>
     </div>
 </body>
 </html>
