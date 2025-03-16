@@ -70,6 +70,7 @@
                 display: flex;
                 justify-content: center;
                 width: 100%;
+                justify-content: space-evenly;
             }
         }
         @media screen and (max-width: 992px) {    
@@ -85,6 +86,9 @@
                 width: 100%;
                 justify-content: flex-end;
                 transform: translateY(-83.5px);
+            }
+            #css {
+                transform: translateY(80px); 
             }
         }
         @keyframes fadeIn {
@@ -114,7 +118,8 @@
         <a href = "esercitazione.html"> <button class = "pulsante"> Esercitazione </button></a> 
         <a href = "ricetta.html"> <button class = "pulsante"> Ricetta </button></a>
         <div id = "ultima-riga">
-            <a href = "tabellacss.html"> <button class = "pulsante"> CSS </button></a>
+            <a href = "tabellacss.html" id = "css"> <button class = "pulsante"> CSS </button></a>
+            <a href = "float.html"> <button class = "pulsante"> float </button></a>
         </div>
     </div>
 </body>
