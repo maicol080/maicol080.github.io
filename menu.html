@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
-    <title>Menu</title>
+    <title>Menu Tema Marrone</title>
     <style>
-        body {
+        body, button {
             font-family: 'Josefin Sans', sans-serif;
             background-color: #F8EAD2;
         }
@@ -67,6 +67,27 @@
             margin-top: 10%;
             color: #5A3E2B;
         }
+        #indice {
+            background-color: #C5906C;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+        }
+        #indice:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+            background-color: #A37050;
+        }
+        #indice:not(:hover) {
+            transition: 0.7s;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -83,6 +104,7 @@
         </div>
     </div>
     <h3> I primi cinque progetti realizzati sono disponibili nel menu qui sopra </h3>
+    <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
     <script>
         function myFunction() {
             document.getElementById("menu").classList.toggle("show");
