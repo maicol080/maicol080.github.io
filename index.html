@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intestazioni</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./images/icona.png">
     <style>
         html, body {
             opacity: 0;
@@ -66,6 +67,12 @@
             .pulsante {
                 width: 150px;
             }
+            #ultima-riga {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                justify-content: space-evenly;
+            }
         }
         @media screen and (max-width: 992px) {    
             .container {
@@ -73,7 +80,20 @@
             }
             .pulsante {
                 width: 101px;
-                font-size:10px;
+                font-size: 10px;
+                margin: 5px;
+            }
+            #ultima-riga {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            #boot {
+                transform: translateX(-38px);
+            }
+            #modal {
+                transform: translateX(38px);
             }
         }
         @keyframes fadeIn {
@@ -102,9 +122,13 @@
         <a href = "submit.html"> <button class = "pulsante"> Modulo </button></a>
         <a href = "esercitazione.html"> <button class = "pulsante"> Esercitazione </button></a> 
         <a href = "ricetta.html"> <button class = "pulsante"> Ricetta </button></a>
-        <a href = "tabellacss.html" id = "css"> <button class = "pulsante"> CSS </button></a>
+	    <a href = "tabellacss.html"> <button class = "pulsante"> CSS </button></a>
         <a href = "float.html"> <button class = "pulsante"> float </button></a>
         <a href = "menu.html"> <button class = "pulsante"> menu </button></a>
+        <div id = "ultima-riga">
+            <a href = "bootstrap.html" id = "boot"> <button class = "pulsante"> bootstrap </button></a>
+            <a href = "modal.html" id = "modal"> <button class = "pulsante"> modal </button></a>
+        </div>
     </div>
 </body>
 </html>
