@@ -5,58 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="./images/icona.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
+        h1 {
+            text-align: center;
+        }
+        body {
+            position: relative;
+        }
+        body, input {
+            background-color: #F8EAD2;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        input {
+            border: solid #C5906C;
+            border-radius: 3px;
+        }
         table, tr, td {
             border: 1px solid black;
+            margin: 0;
+            width: 30%;
+            aspect-ratio: 16 / 9;
+            text-align: center;
+            font-size: 97%;
+            table-layout: fixed;
+        }
+        img {
+            display: block;
+            border-radius: 20px;
+            width: 30%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover; 
+        }
+        #imgTab {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 5%;
+        }
+        #lista {
+            display: flex;
+            justify-content: center;
+        }
+        #ricetta {
+            position: absolute;
+            top: 0;
+            right: 1%;
+        }
+        #indice {
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+        }
+        #ricetta, #invia, #indice {
+            background-color: #C5906C;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 10px;
+        }
+        #ricetta:hover, #invia:hover, #indice:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+            background-color: #A37050;
+        }
+        #ricetta:not(:hover), #invia:not(:hover), #indice:not(:hover) {
+            transition: 0.7s;
+            border-radius: 10px;
+        }
+        h3, p {
+            text-align: center;
+        }
+        #dati {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+        }
+        #scelte {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <a href = "index.html"> Torna indietro </a> 
     <h1> Tartufo bianco con tagliolini </h1>
-    <img src = "https://wips.plug.it/cips/buonissimo.org/cms/2019/03/tagliolini-tartufo.jpg?w=712&a=c&h=406" alt = "Tartufo bianco con tagliolini">
-    <table>
-        <tr>
-            <td> </td>
-            <td> Difficoltà </td>
-            <td> Tempo di preparazione </td>
-            <td> Costo </td>
-        </tr>
-        <tr>
-            <td> Comprando la pasta </td>
-            <td> Media </td>
-            <td> 15 minuti </td>
-            <td> 30 euro </td>
-        </tr>
-        <tr> 
-            <td> Facendo la pasta a mano </td>
-            <td> Difficile </td>
-            <td> 45/60 minuti </td>
-            <td> 30 euro </td>
-        </tr>
-    </table>
+    <div id = "imgTab">
+        <img src = "https://wips.plug.it/cips/buonissimo.org/cms/2019/03/tagliolini-tartufo.jpg?w=712&a=c&h=406" alt = "Tartufo bianco con tagliolini">
+        <table>
+            <tr>
+                <td> </td>
+                <td> Difficoltà </td>
+                <td> Tempo di preparazione </td>
+                <td> Costo </td>
+            </tr>
+            <tr>
+                <td> Comprando la pasta </td>
+                <td> Media </td>
+                <td> 15 minuti </td>
+                <td> 30 euro </td>
+            </tr>
+            <tr> 
+                <td> Facendo la pasta a mano </td>
+                <td> Difficile </td>
+                <td> 45/60 minuti </td>
+                <td> 30 euro </td>
+            </tr>
+        </table>
+    </div>
     <ul>
-        <li> Comprando i tagliolini 
-            <ul>
-                <li> Tagliolini </li>
-                <li> Tartufo bianco </li>
-                <li> Burro </li>
-                <li> Parmigiano Reggiano </li>
-            </ul>
-        </li>
-        <li> Facendo i tagliolini in casa 
-            <ul>
-                <li> Tagliolini 
-                    <ul>
-                        <li type = "circle"> Farina </li>
-                        <li type = "circle"> Uova </li>
-                    </ul>
-                </li>
-                <li> Tartufo bianco </li>
-                <li> Burro </li>
-                <li> Parmigiano Reggiano </li>
-            </ul>
-        </li>
+        <div id = "lista">
+            <li> Comprando i tagliolini 
+                <ul>
+                    <li> Tagliolini </li>
+                    <li> Tartufo bianco </li>
+                    <li> Burro </li>
+                    <li> Parmigiano Reggiano </li>
+                </ul>
+            </li>
+            <li> Facendo i tagliolini in casa 
+                <ul>
+                    <li> Tagliolini 
+                        <ul>
+                            <li style="list-style-type: disc;"> Farina </li>
+                            <li style="list-style-type: disc;"> Uova </li>
+                        </ul>
+                    </li>
+                    <li> Tartufo bianco </li>
+                    <li> Burro </li>
+                    <li> Parmigiano Reggiano </li>
+                </ul>
+            </li>
+        </div>
     </ul>
     <h3> Per la preparazione </h3>
     <p> Gettare i tagliolini in una pentola molto capiente con acqua salata in ebollizione, nel frattempo, pulire il tartufo bianco, asciugarlo alla perfezione e grattugiarne la metà.
@@ -66,30 +147,37 @@
         Lasciar insaporire il composto per qualche minuto, mescolando di tanto in tanto con un cucchiaio di legno.
         Quando i tagliolini al tartufo si saranno amalgamati bene con il condimento, trasferirli in un piatto da portata e servirli subito ben caldi, guarnendoli con fettine sottilissime del tartufo rimasto.
     </p>
-    <p> Link alla <a href="https://www.fortunatiantonio.it/tagliolini-tartufo-bianco/" target = "_blank"> ricetta originale </a>
-    </p>
-    <label for = "Email"> Email </label>
-    <input type = "email" id = "Email">
+    <div id = "dati">
+        <div>
+            <label for = "Email"> Email </label>
+            <input type = "email" placeholder = "Email" id = "Email">
+        </div>
+        <div>
+            <label for = "Password"> Password </label>
+            <input type = "password" placeholder = "Password" id = "Password">
+        </div>
+    </div>
     <br/> <br/>
-    <label for = "Password"> Password </label>
-    <input type = "password" id = "Password">
-    <br/> <br/>
-    <label for = "Acconsento"> Acconsento al trattamento dei dati </label>
-    <input type = "checkbox" id = "Acconsento">
-    <br/> <br/>
-    <h3> Livello di gradimento: </h3>
-    <input type = "radio" id = "Molto buono" name = "gradimento">
-    <label for = "Molto buono" name = "gradimento"> Molto buono </label>
-    <br/>
-    <input type = "radio" id = "Buono" name = "gradimento">
-    <label for = "Buono" name = "gradimento"> Buono </label>
-    <br/>
-    <input type = "radio" id = "Passabile" name = "gradimento">
-    <label for = "Passabile" name = "gradimento"> Passabile </label>
-    <br/>
-    <input type = "radio" id = "Scarso" name = "gradimento">
-    <label for = "Scarso" name = "gradimento"> Scarso </label>
-    <br/> <br/>
-    <input type = "submit" value = "Invia">
+    <div id = "scelte">
+        <label for = "Acconsento"> Acconsento al trattamento dei dati </label>
+        <input type = "checkbox" id = "Acconsento">
+        <br/> <br/>
+        <h3> Livello di gradimento: </h3>
+        <input type = "radio" id = "Molto buono" name = "gradimento">
+        <label for = "Molto buono" name = "gradimento"> Molto buono </label>
+        <br/>
+        <input type = "radio" id = "Buono" name = "gradimento">
+        <label for = "Buono" name = "gradimento"> Buono </label>
+        <br/>
+        <input type = "radio" id = "Passabile" name = "gradimento">
+        <label for = "Passabile" name = "gradimento"> Passabile </label>
+        <br/>
+        <input type = "radio" id = "Scarso" name = "gradimento">
+        <label for = "Scarso" name = "gradimento"> Scarso </label>
+        <br/> <br/>
+        <input type = "submit" value = "Invia" id = "invia">
+        <a href = "https://www.fortunatiantonio.it/tagliolini-tartufo-bianco/" target = "_blank"><button id = "ricetta"> ricetta originale </button></a>
+    </div>
+    <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
 </body>
 </html>
