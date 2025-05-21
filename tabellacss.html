@@ -5,23 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="./images/icona.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F8EAD2;
+        }
         .odd {
             background-color: gray;
         }
+        td {
+            background-color: #C5906C;
+        }
+        table {
+            background-color: #A37050;
+        }
         table, tr, td {
+            margin: auto;
             border: 1px solid black;
+            text-align: center;
         }
         td {
             padding: 5px;
         }
          td:hover {
-            background-color: red;
+            background-color: #F8EAD2;
+        }
+        #indice {
+            background-color: #C5906C;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+        }
+        #indice:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+            background-color: #A37050;
+        }
+        #indice:not(:hover) {
+            transition: 0.7s;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <p><a href = index.html> Torna indietro </a></p>
     <table>
         <tr class = "odd">
             <td> Dispari </td>
@@ -144,5 +181,6 @@
             <td> Pari </td>
         </tr>
     </table>
+    <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
 </body>
 </html>
