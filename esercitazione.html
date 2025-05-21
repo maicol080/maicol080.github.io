@@ -5,67 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="./images/icona.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+        body {
+            position: relative;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 1%;
+        }
+        button {
+            background-color: #A37050;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            padding: 6px 12px;
+        }
+        #img, h1, h2 {
+            text-align: center;
+        }
+        #sito {
+            position: absolute;
+            top: 0;
+            right: 1%;
+        }
+        body, input {
+            background-color: #F8EAD2;
+        }
         table, td, tr {
             border: 1px solid black;
+        }
+        #btn, #btn2 {
+            background-color: #F8EAD2;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 10px;
+        }
+        #btn:hover, #btn2:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+        .modal-content {
+            background-color: #F8EAD2;
+            color: black;
+        }
+        #sito, #indice {
+            background-color: #C5906C;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 10px;
+        }
+        #sito:hover, #indice:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+            background-color: #A37050;
+        }
+        #sito:not(:hover), #indice:not(:hover), #btn:not(:hover) {
+            transition: 0.7s;
+            border-radius: 10px;
+        }
+        img {
+            border-radius: 10px;
+        }
+        #rs, #gt3 {
+            height: 15%;
+            width: 30%;
+            background-color: #C5906C;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+        }
+        #optional {
+            text-align: center;
+        }
+        #modulo {
+            text-align: center;
+        }
+        #btn2 {
+            background-color: #C5906C;
+            color: white;
+        }
+        input {
+            background-color: transparent;
+            border: none;
+        }
+        .modal-footer button {
+            border-radius: 5px;
+            border: none;
+            color: white;
+            padding: 6px 12px;
+            background-color:  #C5906C;
+            border-radius: 3px;
+        }
+        .modal-footer button:hover {
+            background-color: #A37050;
+            opacity: 1;
+            text-shadow: none;
+            outline: none;
         }
     </style>
 </head>
 <body>
-    <p><a href = index.html> Torna indietro </a></p>
     <h1>Porsche 911 </h1>
-    <img src = "https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3LUUEssTugNTb7gKOCl3UBb%25cUzW1TipaIKyGZPm21rHv3CtJMhzCZqAZsNZJxFkS1BVpN9jfsU%257yxRyYpDkrIOLHn1LuWXsOGoxeV6iTxectBvoqKpf8Il7%25oQ6lrQ98ASiWsMNXibELZdW%25tFxQD92cUXqYqZpKa" alt = "Porsche GT3 RS">
-    <br/>
-    <br/>
-    <table>
-        <tr>
-            <td> Modello </td>
-            <td> Alimentazione </td>
-            <td> Prezzo </td>
-        </tr>
-        <tr>
-            <td> GT3 RS </td>
-            <td> Benzina </td>
-            <td> 258.263€ </td>
-        </tr>
-        <tr>
-            <td> GT3 </td>
-            <td> Benzina </td>
-            <td> 215.543€ </td>
-        </tr>
-    </table>
-    <h3> Optional tra cui scegliere: </h3>
-    <ul>
-        <li> Interni in pelle </li>
-        <li> Vetri oscurati </li>
-        <li> Cofano in carbonio </li>
-        <li> Computer di bordo </li>
-        <li> Cerchi in lega 20'' </li>
-    </ul>
-    <h3> Porsche GT3 RS </h3>
-    <p> <b>Prestazioni in pista: </b> Assetto aerodinamico avanzato con ali regolabili e carico aerodinamico impressionante per un'aderenza eccezionale in curva</p>
-    <p> <b>Leggerezza: </b> Materiali ultraleggeri come carbonio e magnesio per massimizzare agilità e velocità</p>
-    <h3> Porsche GT3 </h3>
-    <p> <b>Versatilità: </b> Equilibrio tra prestazioni in pista e utilizzo su strada grazie a un setup meno estremo</p>
-    <p> <b>Precisione di guida: </b>  Sospensioni calibrate per offrire un controllo impeccabile, sia in pista che su strade tortuose </p>
-    <p><a href = "https://www.porsche.com/italy/"> Sito della Porsche </a></p>
-    <h3>Modulo:</h3>
-    <label for = "concessionaria"> Nome Concessionaria: </label>
-    <input type = "text" id = "concessionaria">
-    <br/>
-    <br/>
-    <span>Modello:</span>
-    <br>
-    <input type="radio" name="modello" id="GT3_RS">
-    <label for="GT3_RS">GT3 RS</label>
-    <input type="radio" name="modello" id="GT3">
-    <label for="GT3">GT3</label>
-    <br/>
-    <br/>
-    <label for = "acconsento"> Acconsento </label>
-    <input type = "checkbox" id = "acconsento">
-    <br/>
-    <br/>
-    <input type = "submit" value="Invia"> 
+    <div id = "img">
+        <img src = "https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3LUUEssTugNTb7gKOCl3UBb%25cUzW1TipaIKyGZPm21rHv3CtJMhzCZqAZsNZJxFkS1BVpN9jfsU%257yxRyYpDkrIOLHn1LuWXsOGoxeV6iTxectBvoqKpf8Il7%25oQ6lrQ98ASiWsMNXibELZdW%25tFxQD92cUXqYqZpKa" alt = "Porsche GT3 RS">
+    </div>
+    <br/> <br/>
+    <h1> I nostri modelli: </h1>
+    <div id = "container">
+        <div id = "rs">
+            <h4 style = "text-align: center;">GT3 RS </h4>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btn"> Scopri di più </button>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title"> Porsche GT3 RS - Benzina</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p> <b>Prestazioni in pista: </b> Assetto aerodinamico avanzato con ali regolabili e carico aerodinamico impressionante per un'aderenza eccezionale in curva</p>
+                            <p> <b>Leggerezza: </b> Materiali ultraleggeri come carbonio e magnesio per massimizzare agilità e velocità</p>
+                        </div>
+                        <div class="modal-footer">
+                            <p> prezzo: 258.263€</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id = "gt3">
+            <h4 style = "text-align: center;">GT3</h4>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2" id="btn"> Scopri di più </button>
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title"> Porsche GT3 - Benzina</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p> <b>Versatilità: </b> Equilibrio tra prestazioni in pista e utilizzo su strada grazie a un setup meno estremo</p>
+                            <p> <b>Precisione di guida: </b>  Sospensioni calibrate per offrire un controllo impeccabile, sia in pista che su strade tortuose </p>
+                        </div>
+                        <div class="modal-footer">
+                            <p> prezzo: 258.263€</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "optional">
+        <h3> Optional tra cui scegliere: </h3>
+        <ul style="display: inline-block; text-align: left;">
+            <li> Interni in pelle </li>
+            <li> Vetri oscurati </li>
+            <li> Cofano in carbonio </li>
+            <li> Computer di bordo </li>
+            <li> Cerchi in lega 20'' </li>
+        </ul>
+    </div>
+    <div id = "modulo">
+        <button style = "bottom: 10px;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3" id="btn2"> Modulo </button>
+        <div class="modal fade" id="myModal3" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title"> Modulo </h3>
+                    </div>
+                    <div class="modal-body">
+                        <span>Modello:</span>
+                        <br>
+                        <input type="radio" name="modello" id="GT3_RS">
+                        <label for="GT3_RS">GT3 RS</label>
+                        <input type="radio" name="modello" id="GT3">
+                        <label for="GT3">GT3</label>
+                        <br/>
+                        <br/>
+                        <label for = "acconsento"> Acconsento </label>
+                        <input type = "checkbox" id = "acconsento">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"> <input type = "submit" value="Invia"> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
