@@ -5,18 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intestazioni</title>
     <link rel="icon" type="image/x-icon" href="./images/icona.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
-        u {
-            color: red;
-            font-size: 40px;
+        body {
+            background-color: #F8EAD2;
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: center;
+        }
+        #indice {
+            background-color: #C5906C;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 10px;
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+        }
+        #indice:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+            background-color: #A37050;
+        }
+        #indice:not(:hover) {
+            transition: 0.7s;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <p><a href = index.html> Torna indietro </a></p>
-    <u> Colorato e sottolineato </u> <br/>
-    <b> Grassetto </b> <br/>
-    <i> Corsivo </i> <br/>
-    <s> Sbarrato </s> <br/>
+    <h2>Testo colorato</h2>
+    <p style = "color: #C5906C;"> Testo </p>
+    <h2>Testo sottolineato </h2>
+    <p style = "text-decoration: underline;"> Testo </p>
+    <h2>Testo in grassetto </h2>
+    <p style = "font-weight: bold;"> Testo </p>
+    <h2>Testo in corsivo </h2>
+    <p style = "font-style: italic;"> Testo </p>
+    <h2>Testo sbarrato </h2>
+    <p style = "text-decoration: line-through;"> Testo </p>
+    <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
 </body>
 </html>
