@@ -5,12 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="./images/icona.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F8EAD2;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #indice {
+            background-color: #C5906C;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 10px;
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+        }
+        #indice:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+            background-color: #A37050;
+        }
+        #indice:not(:hover) {
+            transition: 0.7s;
+            border-radius: 10px;
+        }
         #head {
             background-color: lightgray;
         }
+        table {
+            table-layout: fixed;
+            height: 40%;
+            width: 40%;
+        }
         table, td, tr {
-            border: 1px solid black;
+            border: 2px solid #A37050;
+            margin: auto;
         }
         td {
             text-align: center;
@@ -30,46 +73,48 @@
     </style>
 </head>
 <body>
-    <p><a href = index.html> Torna indietro </a></p>
-    <table>
-        <tr>
-            <td id = "head" colspan = "5"> Classe 3Cinf </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td> Storia </td>
-            <td> Matematica </td>
-            <td> Informatica </td>
-            <td> italiano </td>
-        </tr>
-        <tr>
-            <td> Luca </td>
-            <td class = "red"> 3 </td>
-            <td class = "orange"> 5 </td>
-            <td class = "red"> 2 </td>
-            <td class = "yellow"> 5.5 </td>
-        </tr>
-        <tr>
-            <td> Marco </td>
-            <td class = "green"> 9 </td>
-            <td class = "green"> 6 </td>
-            <td class = "orange"> 5 </td>
-            <td class = "green"> 7 </td>
-        </tr>
-        <tr>
-            <td> Valerio </td>
-            <td class = "yellow"> 5.5 </td>
-            <td class = "green"> 9 </td>
-            <td class = "red"> 4.5 </td>
-            <td class = "green"> 6 </td>
-        </tr>
-        <tr>
-            <td> Simone </td>
-            <td class = "green"> 7 </td>
-            <td class = "red"> 2 </td>
-            <td class = "orange"> 5 </td>
-            <td class = "green"> 9</td>
-        </tr>
-    </table>
+    <div class = "container">
+        <table>
+            <tr>
+                <td id = "head" colspan = "5"> Classe 3Cinf </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> Storia </td>
+                <td> Matematica </td>
+                <td> Informatica </td>
+                <td> italiano </td>
+            </tr>
+            <tr>
+                <td> Luca </td>
+                <td class = "red"> 3 </td>
+                <td class = "orange"> 5 </td>
+                <td class = "red"> 2 </td>
+                <td class = "yellow"> 5.5 </td>
+            </tr>
+            <tr>
+                <td> Marco </td>
+                <td class = "green"> 9 </td>
+                <td class = "green"> 6 </td>
+                <td class = "orange"> 5 </td>
+                <td class = "green"> 7 </td>
+            </tr>
+            <tr>
+                <td> Valerio </td>
+                <td class = "yellow"> 5.5 </td>
+                <td class = "green"> 9 </td>
+                <td class = "red"> 4.5 </td>
+                <td class = "green"> 6 </td>
+            </tr>
+            <tr>
+                <td> Simone </td>
+                <td class = "green"> 7 </td>
+                <td class = "red"> 2 </td>
+                <td class = "orange"> 5 </td>
+                <td class = "green"> 9</td>
+            </tr>
+        </table>
+    </div>
+    <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
 </body>
 </html>
