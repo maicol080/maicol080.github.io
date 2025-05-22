@@ -10,29 +10,72 @@
             text-align: center;
         }
         #destra {
+            text-align: right;<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intestazioni</title>
+    <link rel="icon" type="image/x-icon" href="./images/icona.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #F8EAD2;
+        }
+        #img {
+            text-align: center;
+        }
+        img {
+            border-radius: 20px;
+        }
+        #destra {
             text-align: right;
             font-family: Verdana;
+        }
+        #indice {
+            background-color: #C5906C;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 10px;
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+        }
+        #indice:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+            background-color: #A37050;
+        }
+        #indice:not(:hover) {
+            transition: 0.7s;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <p><a href = index.html> Torna indietro </a></p>
-    <div>
+    <div id = "img">
         <img id = "immagine" src= "https://www.pineca.it/media/cache/avp_product_thumbnail/f/f/8/f/ff8f280e777035faa9dd945d136e5e428493bd2d_600x435.jpg" alt = "foto di una casa">
     </div>
     <hr>
-    <p id = destra> <em> Testo a destra </em> </p>
+    <p id = destra> <em> Dove il comfort incontra la natura. </em> </p>
+    <h2> Perchè dovrei scegliere di alloggiare qui? </h2>
+    <h3> Comfort<sup>3</sup> </h3>
     <ul type="square">
-    <li><p> testo 1 </a></p></li>
-    <li><p> testo 2 </p></li>
-    <li><p> testo 3 </p></li>
+        <li><p> Veranda privata con salotto all’aperto </p></li>
+        <li><p> Accesso diretto al giardino da ogni stanza </p></li>
+        <li><p> Spazi curati e arredamento moderno </p></li>
     </ul>
+    <h3> Ambiente<sub>n</sub> </h3>
     <ol type = "A" start ="4">
-    <li> <p> testo 1 </p></li>
-    <li> <p> testo 2 </p></li>
-    <li> <p> testo 3 </p></li>
+        <li> <p> Immersa nel verde e circondata da alberi </p></li>
+        <li> <p> Design eco-friendly in legno naturale </p></li>
+        <li> <p> Ampio prato perfetto per attività all’aperto </p></li>
     </ol>
-    <p> apice: x<sup>2</sup></p>
-    <p> pedice: H<sub>2</sub>O </p>
+    <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
 </body>
 </html>
