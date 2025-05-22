@@ -5,77 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="./images/icona.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F8EAD2;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        select, input, option {
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .input {
+            background-color: #A37050;
+            border-radius: 10px;
+            border: none;
+            padding: 5px;
+            font-family: 'Josefin Sans', sans-serif;
+            color: white;
+        }
+        #container {
+            width: 40%;
+            height: 15%;
+            margin: auto;
+            margin-top: 2%;
+            background-color: #5A3E2B;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #id, #id2 {
+            display: flex;
+            justify-content: space-between;
+        }
+        #foto {
+            display: none;
+        }
+        #caricafoto {
+            display: inline-block;
+            padding: 10px;
+            background-color: #A37050;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        #caricafoto:hover {
+            border-radius: 15px;
+            transition: 0.7s;
+        }
+        #caricafoto:not(:hover) {
+            transition: 0.7s;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            margin: auto;
+        }
+        #info {
+            margin-top: 2%;
+            height: 15%;
+            width: 20%;
+            background-color: #5A3E2B;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        #indice {
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+        }
+        #notes {
+            width: 20%;
+            color: white;
+            margin-top: 2%;
+            background-color: #5A3E2B;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #invia, #indice {
+            background-color: #C5906C;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
+            padding: 10px;
+        }
+        #invia:hover, #indice:hover {
+            border-radius: 32px;
+            transition: 0.7s;
+            cursor: pointer;
+            background-color: #A37050;
+        }
+        #invia:not(:hover), #indice:not(:hover) {
+            transition: 0.7s;
+            border-radius: 10px;
+        }
+        #footer {
+            margin-top: 2%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <p><a href = index.html> Torna indietro </a></p>
-    <label for = "nome"> Nome </label>
-    <input type = "text" id = "nome">
-    <br>
-    
-    <label for = "cognome"> Cognome </label>
-    <input type = "text" id = "cognome">
-    <br> 
-
-    <label for = "DataDiNascita"> Data di Nascita </label>
-    <input type = "Date" id = "DataDiNascita">
-    <br>
-
-    <label for = "email"> Email </label>
-    <input type = "email" id = "email">
-    <br>
-
-    <label for = "password"> Password </label>
-    <input type = "password" id = "password">
-    <br>
-
-    <label for = "regione"> Regione </label>
-    <select id="regione">
-
-        <option value ="piemonte"> Piemonte </option>
-        <option value ="ValleD'Aosta"> Valle D'Aosta </option>
-        <option value ="lombardia"> Lombardia </option>
-        <option value ="Trentino-AltoAdige"> Trentino </option>
-        <option value ="veneto"> Veneto </option>
-        <option value ="Friuli-VeneziaGiulia"> Friuli </option>
-        <option value ="liguria"> Liguria </option>
-        <option value ="emilia-romagna"> Emilia-Romagna </option>
-        <option value ="toscana"> Toscana </option>
-        <option value ="umbria"> Umbria </option>
-        <option value ="marche"> Marche </option>
-        <option value ="lazio"> Lazio </option>
-        <option value ="abruzzo"> Abruzzo </option>
-        <option value ="molise"> Molise </option>
-        <option value ="campania"> Campania </option>
-        <option value ="puglia"> Puglia </option>
-        <option value ="basilicata"> Basilicata </option>
-        <option value ="calabria"> Calabria </option>
-        <option value ="sicilia"> Sicilia </option>
-        <option value ="sardegna"> Sardegna </option>
-    </select>
-    <br>
-
-    <span>Sesso:</span>
-    <br>
-    <input type="radio" name="sesso" id="maschio">
-    <label for="maschio">Maschio</label>
-    <input type="radio" name="sesso" id="femmina">
-    <label for="femmina">Femmina</label>
-    <br>
-
-    <label for = "note"> Note: </label>
-    <br>
-    <textarea rows = "4" id = "note"> </textarea>
-    <br>
-
-    <label for = "foto"> Foto </label>
-    <input type = "file" id = "foto">
-    <br>
-
-    <label for = "acconsento"> Acconsento </label>
-    <input type = "checkbox" id = "acconsento">
-    <br>
-
-    <input type = "submit" value = "Invia">
-    <br>
+    <h1 style = "text-align: center; "> Compilare il modulo: </h1>
+    <div class = "container">
+        <div id = "info">
+            <label for = "email"> Email </label>
+            <input class = "input" type = "email" id = "email">
+            <br/><br/>
+            <label for = "password"> Password </label>
+            <input class = "input" type = "password" id = "password">
+            <br/><br/>
+        </div>
+        <div id = "container">
+            <label for = "foto" id = "caricafoto"> Carica immagine </label>
+            <input type = "file" id = "foto">
+            <br/> <br/>
+            <div id = "id">
+                <div>
+                    <label for = "nome"> Nome </label>
+                    <input class = "input" type = "text" id = "nome">
+                </div>
+                <div>
+                    <label for = "cognome"> Cognome </label>
+                    <input class = "input" type = "text" id = "cognome">
+                </div>
+            </div>
+            <br/>
+            <label for = "DataDiNascita"> Data di Nascita </label>
+            <input class = "input" type = "Date" id = "DataDiNascita">
+            <br/> <br/>
+            <div id = "id2">
+                <div>
+                    <label for = "regione"> Regione </label>
+                    <select class = "input" id="regione">
+                        <option value ="piemonte"> Piemonte </option>
+                        <option value = "Valle D'Aosta"> Valle D'Aosta </option>
+                        <option value ="lombardia"> Lombardia </option>
+                        <option value ="Trentino-AltoAdige"> Trentino </option>
+                        <option value ="veneto"> Veneto </option>
+                        <option value ="Friuli-VeneziaGiulia"> Friuli </option>
+                        <option value ="liguria"> Liguria </option>
+                        <option value ="emilia-romagna"> Emilia-Romagna </option>
+                        <option value ="toscana"> Toscana </option>
+                        <option value ="umbria"> Umbria </option>
+                        <option value ="marche"> Marche </option>
+                        <option value ="lazio"> Lazio </option>
+                        <option value ="abruzzo"> Abruzzo </option>
+                        <option value ="molise"> Molise </option>
+                        <option value ="campania"> Campania </option>
+                        <option value ="puglia"> Puglia </option>
+                        <option value ="basilicata"> Basilicata </option>
+                        <option value ="calabria"> Calabria </option>
+                        <option value ="sicilia"> Sicilia </option>
+                        <option value ="sardegna"> Sardegna </option>
+                    </select>
+                </div>
+                <div>
+                    <span>Sesso:</span>
+                    <input class = "input" type="radio" name="sesso" id="maschio">
+                    <label for="maschio">Maschio</label>
+                    <input class = "input" type="radio" name="sesso" id="femmina">
+                    <label for="femmina">Femmina</label>
+                </div>
+            </div>
+        </div>
+        <div id = "notes">
+            <label for = "note"> Note: </label>
+            <br/>
+            <textarea class = "input" rows = "4" id = "note"> </textarea>
+        </div>
+    </div>
+    <div id = "footer">
+        <input class = "input" type = "checkbox" id = "acconsento">
+        <label for = "acconsento"> Acconsento </label>
+        <br/><br/>
+        <input class = "input" type = "submit" value = "Invia" id = "invia">
+    </div>
+    <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
 </body>
 </html>
