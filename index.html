@@ -10,7 +10,6 @@
         html, body {
             background-color: #F8EAD2;
             color: #5A3E2B;
-            height: 100%;
         }
         #titolo {
             font-size: 40px;
@@ -59,6 +58,9 @@
             height: 50px;
         }
         @media screen and (min-width: 992px) {
+            html, body {
+                height: 500px;
+            }
             .container {
                 width: 500px;
             }
@@ -71,8 +73,14 @@
                 width: 100%;
                 justify-content: space-evenly;
             }
+            #modal {
+                transform: translateY(-83.2px);
+            }
         }
-        @media screen and (max-width: 992px) {    
+        @media screen and (max-width: 992px) {
+            html, body {
+                height: 700px;
+            }
             .container {
                 width: 300px;
             }
@@ -86,12 +94,6 @@
                 width: 100%;
                 justify-content: center;
                 flex-wrap: wrap;
-            }
-            #boot {
-                transform: translateX(-38px);
-            }
-            #modal {
-                transform: translateX(38px);
             }
         }
     </style>
@@ -112,11 +114,12 @@
         <a href = "submit.html"> <button class = "pulsante"> Modulo </button></a>
         <a href = "esercitazione.html"> <button class = "pulsante"> Esercitazione </button></a> 
         <a href = "ricetta.html"> <button class = "pulsante"> Ricetta </button></a>
-	    <a href = "tabellacss.html"> <button class = "pulsante"> CSS </button></a>
+	<a href = "tabellacss.html"> <button class = "pulsante"> CSS </button></a>
         <a href = "float.html"> <button class = "pulsante"> float </button></a>
         <a href = "menu.html"> <button class = "pulsante"> menu </button></a>
+        <a href = "bootstrap.html" id = "boot"> <button class = "pulsante"> bootstrap </button></a>
+        <a href = "https://maicol080.altervista.org/?doing_wp_cron=1748016055.4280691146850585937500" id = "altervista"> <button class = "pulsante"> altervista </button></a>
         <div id = "ultima-riga">
-            <a href = "bootstrap.html" id = "boot"> <button class = "pulsante"> bootstrap </button></a>
             <a href = "modal.html" id = "modal"> <button class = "pulsante"> modal </button></a>
         </div>
     </div>
