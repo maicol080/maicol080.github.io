@@ -7,6 +7,9 @@
     <link rel="icon" type="image/x-icon" href="./images/icona.png">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         @media screen and (max-width: 992px) {
             p {
                 font-size: 30px;
@@ -79,6 +82,10 @@
             cursor: pointer;
             background-color: #A37050;
         }
+        #container {
+            max-width: 1150px;
+            margin: auto;
+        }
         #indice:not(:hover) {
             transition: 0.7s;
             border-radius: 10px;
@@ -86,13 +93,15 @@
     </style>
 </head>
 <body>
-    <div id = "primo"><p>Come assemblare un pc </p></div>
-    <div id = "secondo"></div>
-    <div id = "terzo"></div>
-    <div id = "quarto"> 
-        <iframe src="https://www.youtube.com/embed/BhBgTZbNY_o?si=BdnQHlqKCdoHe6HP" title="YouTube video player" allowfullscreen width = "100%" height = "300px"></iframe>
+    <div id = "container">
+        <div id = "primo"><p>Come assemblare un pc </p></div>
+        <div id = "secondo"></div>
+        <div id = "terzo"></div>
+        <div id = "quarto"> 
+            <iframe src="https://www.youtube.com/embed/BhBgTZbNY_o?si=BdnQHlqKCdoHe6HP" title="YouTube video player" allowfullscreen width = "100%" height = "300px"></iframe>
+        </div>
+        <div id = "quinto"></div>
     </div>
-    <div id = "quinto"></div>
     <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
 </body>
 </html>
