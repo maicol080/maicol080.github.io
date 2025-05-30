@@ -27,7 +27,7 @@
         }
         #sito {
             position: absolute;
-            top: 0;
+            top: 1%;
             right: 1%;
         }
         body, input {
@@ -36,7 +36,7 @@
         table, td, tr {
             border: 1px solid black;
         }
-        #btn, #btn2 {
+        .button, #btn2 {
             background-color: #F8EAD2;
             color: black;
             border: none;
@@ -44,7 +44,7 @@
             box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
             padding: 10px;
         }
-        #btn:hover, #btn2:hover {
+        .button:hover, #btn2:hover {
             border-radius: 32px;
             transition: 0.7s;
             cursor: pointer;
@@ -59,7 +59,7 @@
             right: 5%;
             bottom: 5%;
         }
-        #sito, #indice {
+        #sito, #indice, #submit{
             background-color: #C5906C;
             border: none;
             border-radius: 10px;
@@ -67,13 +67,13 @@
             box-shadow: 3px 3px 6px rgba(30, 20, 10, 0.5);
             padding: 10px;
         }
-        #sito:hover, #indice:hover {
+        #sito:hover, #indice:hover, #submit:hover{
             border-radius: 32px;
             transition: 0.7s;
             cursor: pointer;
             background-color: #A37050;
         }
-        #sito:not(:hover), #indice:not(:hover), #btn:not(:hover) {
+        #sito:not(:hover), #indice:not(:hover), .button:not(:hover), #btn2:not(:hover), #submit:not(:hover){
             transition: 0.7s;
             border-radius: 10px;
         }
@@ -108,19 +108,29 @@
             background-color: transparent;
             border: none;
         }
-        .modal-footer button {
-            border-radius: 5px;
-            border: none;
-            color: white;
-            padding: 6px 12px;
-            background-color:  #C5906C;
-            border-radius: 3px;
+        #btngt3 {
+          background-image: url('https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3LUUEssTugNTb7gKOCl3UBb%25cUzW1TipaIKyGZPm21rHv3CtJMhzCZqAZsNZJxFkS1BVpN9jfsU%257yxRyYpDkrIOLHn1LuWXsOGoxeV6iTxectBvoqKpf8Il7%25oQ6lrQ98ASiWsMNXibELZdW%25tFxQD92cUXqYqZpKa');
         }
-        .modal-footer button:hover {
-            background-color: #A37050;
-            opacity: 1;
-            text-shadow: none;
-            outline: none;
+        #btngt {
+          background-image: url('https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXuBuNXdMGF4tl3U0%25z8rMHIspMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ9wpRmWBi2Ow7gVdcJItUlhDfDJmspAnPOY0iZJyN2HMctBvoQcXj4AUw9l6a%25JsttpRmWBio9x7gVdcFRBUlhDfuh8spMaXEfOya5OtpW07AhHcn7wZSgA9ElP9u');
+        }
+        #btngt3, #btngt {
+          background-size: cover;
+          background-position: center;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          transition: transform 0.7s;
+          background-color: rgba(0, 0, 0, 0.4);
+          background-blend-mode: multiply;
+        }
+        #btngt3:hover, #btngt:hover {
+          transition: 0.7s;
+          transform: scale(1.1);
+          background-color: transparent;
+        }
+        #btngt3:not(:hover), #btngt:not(:hover) {
+          transition: 0.7s;
         }
     </style>
 </head>
@@ -134,7 +144,7 @@
     <div id = "container">
         <div id = "rs">
             <h4 style = "text-align: center;">GT3 RS </h4>
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btn"> Scopri di più </button>
+            <button type="button" class="btn btn-lg button" id = "btngt3" data-toggle="modal" data-target="#myModal"> Scopri di più </button>
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -155,7 +165,7 @@
         </div>
         <div id = "gt3">
             <h4 style = "text-align: center;">GT3</h4>
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2" id="btn"> Scopri di più </button>
+            <button type="button" class="btn btn-lg button" id = "btngt" data-toggle="modal" data-target="#myModal2"> Scopri di più </button>
             <div class="modal fade" id="myModal2" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -168,7 +178,7 @@
                             <p> <b>Precisione di guida: </b>  Sospensioni calibrate per offrire un controllo impeccabile, sia in pista che su strade tortuose </p>
                         </div>
                         <div class="modal-footer">
-                            <p> prezzo: 258.263€</p>
+                            <p> prezzo: 216.479€</p>
                         </div>
                     </div>
                 </div>
@@ -186,7 +196,7 @@
         </ul>
     </div>
     <div id = "modulo">
-        <button style = "bottom: 10px;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3" id="btn2"> Modulo </button>
+        <button style = "bottom: 10px;" type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal3" id="btn2"> Modulo </button>
         <div class="modal fade" id="myModal3" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -207,12 +217,13 @@
                         <input type = "checkbox" id = "acconsento">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal"> <input type = "submit" value="Invia"> </button>
+                        <button type="button" class="btn" id="submit" data-dismiss="modal">Invia</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <a href = "https://www.porsche.com/italy/" target = "_blank"><button id = "sito"> sito originale </button></a>
     <a href = "index.html"><button id = "indice"> Torna indietro</button></a>
 </body>
 </html>
